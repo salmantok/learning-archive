@@ -1,0 +1,5 @@
+{
+    "scripts": {
+        "test": "modewatch --cmd mdxtra --paths . --ext md,css,js,json --ignore .git,node_modules,public --debounce 300 --restart --verbose"
+    }
+}
