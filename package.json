@@ -1,5 +1,7 @@
 {
     "scripts": {
-        "test": "modewatch --cmd mdxtra --paths . --ext md,css,js,json --ignore .git,node_modules,public --debounce 300 --restart --verbose"
+        "watch:jsmd": "jsmd",
+        "watch:mdxtra": "modewatch --cmd mdxtra --paths . --ext md,css,js,json --ignore .git,node_modules,public --debounce 300 --restart --verbose",
+        "dev": "concurrently -k -n JSMD,MDXTRA -c blue,green \"pnpm watch:jsmd\" \"pnpm watch:mdxtra\""
     }
 }
